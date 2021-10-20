@@ -13,7 +13,7 @@ const TodoContainer = () => {
       <NewTodo />
       <S.Hr />
       {todoList.length === 0 ? (
-        "Great, there is nothing to do!"
+        <S.NoListFound>Great, there is nothing to do!</S.NoListFound>
       ) : (
         <TodoList list={todoList} />
       )}

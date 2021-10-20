@@ -23,6 +23,13 @@ export const Title = styled("h1", {
   backgroundPosition: "50% 100%",
 });
 
+export const NoListFound = styled("p", {
+  margin: "0",
+  padding: "0 20px",
+  fontSize: "$3",
+  color: "$gray300",
+});
+
 export const Hr = styled("div", {
   width: "700px",
   height: "1px",
