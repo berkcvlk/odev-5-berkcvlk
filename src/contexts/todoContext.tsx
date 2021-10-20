@@ -22,15 +22,12 @@ const initialState = {
 export const TodoContext = createContext<ITodoContext>(initialState);
 
 const Provider: FC = ({ children }) => {
-  const [todoList, setTodoList] = useState<ITodo[]>([
-    { id: 1, text: "berk", isChecked: false },
-    { id: 2, text: "civelek", isChecked: false },
-  ]);
+  const [todoList, setTodoList] = useState<ITodo[]>([]);
 
   /**
    * Get the index of todo by id
    */
-  const getIndexById = (id: number) => {
+  const getIndexById = (id: number): number => {
     return todoList.findIndex((item) => item.id === id);
   };
 
