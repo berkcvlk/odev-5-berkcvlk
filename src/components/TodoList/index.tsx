@@ -8,7 +8,7 @@ const TodoList: FC<ITodoList> = ({ list }) => {
   return (
     <S.TodoList>
       {list.map((item, index) => (
-        <Todo key={index} text={item.text} />
+        <Todo key={index} {...item} />
       ))}
     </S.TodoList>
   );
