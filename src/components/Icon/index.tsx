@@ -7,7 +7,7 @@ interface IIcon {
   name: string;
 }
 
-const Icon: FC<IIcon> = ({ name }) => {
+const Icon: FC<IIcon> = ({ name, ...rest }) => {
   const icons: { [index: string]: JSX.Element } = {
     check: <Check />,
     close: <Close />,
