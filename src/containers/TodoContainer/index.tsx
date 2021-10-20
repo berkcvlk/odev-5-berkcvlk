@@ -1,12 +1,22 @@
-import { TodoList, NewTodo, Icon } from "components";
+import { useContext } from "react";
+
+import { TodoContext } from "contexts/todoContext";
+import { TodoList, NewTodo } from "components";
 import * as S from "./styles";
 
 const TodoContainer = () => {
+  const { todoList } = useContext(TodoContext);
+
   return (
     <S.Container>
+      <S.Title>Toodos</S.Title>
       <NewTodo />
-      <TodoList list={[{ text: "berk" }, { text: "civelek" }]} />
-      <Icon name="close" />
+      <S.Hr />
+      {todoList.length === 0 ? (
+        "Greate, there is nothing to do!"
+      ) : (
+        <TodoList list={todoList} />
+      )}
     </S.Container>
   );
 };
