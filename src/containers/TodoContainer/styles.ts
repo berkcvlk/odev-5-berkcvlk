@@ -20,7 +20,7 @@ export const Title = styled("h1", {
 
   backgroundImage: "url('assets/images/check.png')",
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "50% 100%",
+  backgroundPosition: "65% 100%",
 });
 
 export const NoListFound = styled("p", {

@@ -18,7 +18,7 @@ export const New = styled("div", {
   textTransform: "uppercase",
   verticalAlign: "middle",
 
-  marginRight: "32px",
+  marginRight: "24px",
   color: "$text",
   userSelect: "none",
 });
@@ -33,7 +33,7 @@ export const Input = styled("input", {
 
   color: "$text",
 
-  "::-webkit-placeholder": {
+  "&::placeholder": {
     color: "$gray300",
   },
 });
