@@ -20,7 +20,7 @@ export const TodoText = styled("span", {
   outlineColor: "$text",
 
   "&[contenteditable]:empty::before": {
-    content: "What needs to be done?",
+    content: "I think this should not be empty :)",
     color: "$gray300",
     fontWeight: "400",
   },
@@ -39,11 +39,14 @@ export const TodoText = styled("span", {
 export const CheckBox = styled("div", {
   dFlex: "center center",
   flexShrink: "0",
+
   width: "24px",
   height: "24px",
+
   borderRadius: "50%",
   backgroundColor: "$gray200",
   marginRight: "16px",
+
   cursor: "pointer",
   transition: "all .3s",
 

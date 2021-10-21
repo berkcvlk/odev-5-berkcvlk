@@ -1,17 +1,17 @@
-import { FC, FormEvent, useContext, useState } from "react";
+import { FC, FormEvent, useState } from "react";
 
-import { TodoContext } from "contexts/todoContext";
+import { useTodo } from "hooks";
 import * as S from "./styles";
 
 const NewTodo: FC = () => {
   const [value, setValue] = useState("");
-  const { addTodo } = useContext(TodoContext);
+  const { addTodo } = useTodo();
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
 
     // Check for basic validation
-    if (!value && value.length < 3) {
+    if (!value || value.length < 3) {
       return;
     }
 

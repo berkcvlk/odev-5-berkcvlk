@@ -1,11 +1,9 @@
-import { useContext } from "react";
-
-import { TodoContext } from "contexts/todoContext";
-import { TodoList, NewTodo } from "components";
+import { useTodo } from "hooks";
+import { TodoList, NewTodo, Filters } from "components";
 import * as S from "./styles";
 
 const TodoContainer = () => {
-  const { todoList } = useContext(TodoContext);
+  const { todoList, filterByStatus } = useTodo();
 
   return (
     <S.Container>
@@ -15,7 +13,10 @@ const TodoContainer = () => {
       {todoList.length === 0 ? (
         <S.NoListFound>Great, there is nothing to do!</S.NoListFound>
       ) : (
-        <TodoList list={todoList} />
+        <>
+          <Filters />
+          <TodoList list={filterByStatus()} />
+        </>
       )}
     </S.Container>
   );

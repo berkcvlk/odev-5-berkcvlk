@@ -1,5 +1,7 @@
 import { styled } from "stitches.config";
 
+import { Button } from "components";
+
 export const Container = styled("div", {
   width: "700px",
 

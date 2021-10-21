@@ -1,12 +1,12 @@
-import React, { FC, useContext } from "react";
+import React, { FC } from "react";
 
+import { useTodo } from "hooks";
 import { Icon } from "components";
-import { TodoContext } from "contexts/todoContext";
 import { ITodo } from "./types";
 import * as S from "./styles";
 
 const Todo: FC<ITodo> = ({ id, text, isChecked }) => {
-  const { toggleChecked, setText, removeTodo } = useContext(TodoContext);
+  const { toggleChecked, setText, removeTodo } = useTodo();
 
   return (
     <S.Todo>
